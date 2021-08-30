@@ -1,6 +1,5 @@
 package com.nicky.noteapp
 
-import android.content.Context
 import android.os.Bundle
 import android.view.*
 import android.widget.ArrayAdapter
@@ -63,6 +62,24 @@ class NoteFragment : Fragment() {
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.menu_main, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when(item.itemId){
+            R.id.action_settings ->true
+            R.id.action_next ->{
+                moveNext()
+                true
+            }
+
+            else -> super.onOptionsItemSelected(item)
+        }
+
+    }
+
+    private fun moveNext() {
+        ++notePosition
+        displayNote()
     }
 
 }

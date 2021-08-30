@@ -12,7 +12,7 @@
         <entry key="app/src/main/res/layout/fragment_second.xml" value="0.25" />
         <entry key="app/src/main/res/layout/item_course_list.xml" value="0.25" />
         <entry key="app/src/main/res/layout/item_note_list.xml" value="0.33" />
-        <entry key="app/src/main/res/menu/menu_main.xml" value="0.13333333333333333" />
+        <entry key="app/src/main/res/menu/menu_main.xml" value="0.33" />
       </map>
     </option>
   </component>
