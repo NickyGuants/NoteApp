@@ -37,9 +37,10 @@ class NoteFragment : Fragment() {
 
         notePosition = arguments?.let {
             NoteFragmentArgs.fromBundle(it).position}!!
-
+        //SHow the currently selected note
         if (notePosition != POSITION_NOT_SET)
             displayNote()
+        //Adding new notes
         else{
             DataManager.notes.add(NoteInfo())
             notePosition=DataManager.notes.lastIndex
@@ -82,4 +83,15 @@ class NoteFragment : Fragment() {
         displayNote()
     }
 
+    override fun onPause() {
+        super.onPause()
+        saveNote()
+    }
+
+    private fun saveNote() {
+        val note= DataManager.notes[notePosition]
+        note.title=binding.textNoteTitle.text.toString()
+        note.text=binding.editTextTextMultiLine.text.toString()
+        note.course=binding.spinnerCourses.selectedItem as CourseInfo
+    }
 }
