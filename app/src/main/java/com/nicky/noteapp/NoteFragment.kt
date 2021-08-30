@@ -11,6 +11,7 @@ import com.nicky.noteapp.databinding.FragmentNoteBinding
 class NoteFragment : Fragment() {
     private var _binding: FragmentNoteBinding?=null
     private val binding get() = _binding!!
+    private var notePosition= POSITION_NOT_SET
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,15 +28,33 @@ class NoteFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val adapterCourses = context?.let {
-            ArrayAdapter<CourseInfo>(
-                it,
+        val adapterCourses = ArrayAdapter(
+                requireContext(),
                 android.R.layout.simple_spinner_item,
-                DataManager.courses.values.toList())
-        }
-        adapterCourses?.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+                DataManager.courses.values.toList()
+        )
+        adapterCourses.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         binding.spinnerCourses.adapter=adapterCourses
+
+        notePosition = arguments?.let {
+            NoteFragmentArgs.fromBundle(it).position}!!
+
+        if (notePosition != POSITION_NOT_SET)
+            displayNote()
+        else{
+            DataManager.notes.add(NoteInfo())
+            notePosition=DataManager.notes.lastIndex
+        }
     }
+    private fun displayNote() {
+        val note= DataManager.notes[notePosition]
+        binding.textNoteTitle.setText(note.title)
+        binding.editTextTextMultiLine.setText(note.text)
+
+        val coursePosition=DataManager.courses.values.indexOf(note.course)
+        binding.spinnerCourses.setSelection(coursePosition)
+    }
+
 
     override fun onDestroyView() {
         super.onDestroyView()

@@ -9,9 +9,6 @@
         android:name="com.nicky.noteapp.NoteListFragment"
         android:label="@string/app_name"
         tools:layout="@layout/fragment_note_list">
-        <argument
-            android:name="course"
-            app:argType="string" />
         <action
             android:id="@+id/action_noteListFragment_to_noteFragment"
             app:destination="@id/noteFragment" />
@@ -19,5 +16,9 @@
     <fragment
         android:id="@+id/noteFragment"
         android:name="com.nicky.noteapp.NoteFragment"
-        android:label="NoteFragment" />
+        android:label="Edit Note" >
+        <argument
+            android:name="position"
+            app:argType="integer" />
+    </fragment>
 </navigation>

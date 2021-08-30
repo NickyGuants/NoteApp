@@ -30,7 +30,7 @@ class NoteListRecyclerAdapter(context: Context?, private val notes: List<NoteInf
         holder.textTitle?.text= note.title
 
         holder.itemView.setOnClickListener {
-            val action = NoteListFragmentDirections.actionNoteListFragmentToNoteFragment()
+            val action = NoteListFragmentDirections.actionNoteListFragmentToNoteFragment(position)
             holder.itemView.findNavController().navigate(action)
         }
     }
