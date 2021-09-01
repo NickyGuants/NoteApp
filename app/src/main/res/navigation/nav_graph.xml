@@ -16,7 +16,8 @@
     <fragment
         android:id="@+id/noteFragment"
         android:name="com.nicky.noteapp.NoteFragment"
-        android:label="Edit Note" >
+        android:label="Edit Note"
+        tools:layout="@layout/fragment_note">
         <argument
             android:name="position"
             app:argType="integer" />

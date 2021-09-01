@@ -6,9 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.snackbar.Snackbar
 
-class CourseListRecyclerAdapter(private val context: Context?, private val courses: List<CourseInfo>):
+class CourseListRecyclerAdapter(context: Context?, private val courses: List<CourseInfo>):
     RecyclerView.Adapter<CourseListRecyclerAdapter.ViewHolder>(){
 
     private val layoutInflater = LayoutInflater.from(context)
@@ -16,11 +15,6 @@ class CourseListRecyclerAdapter(private val context: Context?, private val cours
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         val courseTitle =itemView?.findViewById<TextView>(R.id.courseTitle)
         var coursePosition =0
-        init {
-            itemView?.setOnClickListener{
-                Snackbar.make(it, courses[coursePosition]?.title, Snackbar.LENGTH_LONG).show()
-            }
-        }
 
     }
 

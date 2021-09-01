@@ -26,15 +26,15 @@ class NoteListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentNoteListBinding.inflate(inflater, container, false)
-        val view =binding.root
-        return view
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.floatingActionButton2.setOnClickListener{
             findNavController().navigate(NoteListFragmentDirections.actionNoteListFragmentToNoteFragment(
                 POSITION_NOT_SET))
-        }
+
+    }
         recyclerView =binding.listItems
         //set the layout manager of the recyclerview
         recyclerView.layoutManager=LinearLayoutManager(context)
@@ -46,6 +46,7 @@ class NoteListFragment : Fragment() {
         super.onDestroyView()
         _binding=null
     }
+
 
 
 }

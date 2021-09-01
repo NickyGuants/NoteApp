@@ -72,7 +72,6 @@ class NoteFragment : Fragment() {
                 moveNext()
                 true
             }
-
             else -> super.onOptionsItemSelected(item)
         }
 
