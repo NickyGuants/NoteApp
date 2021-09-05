@@ -1,10 +1,13 @@
-package com.nicky.noteapp
+package com.nicky.noteapp.ui
 
 import android.os.Bundle
 import android.view.*
 import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
+import com.nicky.noteapp.R
+import com.nicky.noteapp.data.CourseInfo
 import com.nicky.noteapp.data.DataManager
+import com.nicky.noteapp.data.NoteInfo
 import com.nicky.noteapp.data.POSITION_NOT_SET
 import com.nicky.noteapp.databinding.FragmentNoteBinding
 

@@ -1,4 +1,4 @@
-package com.nicky.noteapp
+package com.nicky.noteapp.data
 
 data class CourseInfo(val courseId: String, val title: String) {
     override fun toString(): String {

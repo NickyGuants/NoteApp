@@ -1,4 +1,4 @@
-package com.nicky.noteapp
+package com.nicky.noteapp.data
 
 const val NOTE_POSITION="EXTRA_NOTE_POSITION"
 

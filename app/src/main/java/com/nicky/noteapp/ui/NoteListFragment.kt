@@ -1,4 +1,4 @@
-package com.nicky.noteapp
+package com.nicky.noteapp.ui
 
 import android.os.Bundle
 import android.view.*
@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.nicky.noteapp.adapters.NoteListRecyclerAdapter
 import com.nicky.noteapp.data.DataManager
 import com.nicky.noteapp.data.POSITION_NOT_SET
 import com.nicky.noteapp.databinding.FragmentNoteListBinding

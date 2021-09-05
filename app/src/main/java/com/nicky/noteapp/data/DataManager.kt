@@ -1,4 +1,4 @@
-package com.nicky.noteapp
+package com.nicky.noteapp.data
 
 object DataManager {
     val courses = HashMap<String, CourseInfo>()
@@ -25,7 +25,7 @@ object DataManager {
 
         var course = courses["android_async"]
         var note = NoteInfo(course, "Service default threads",
-            "Did you know that by default an Android Service will tie up the UI thread?")
+            "Did you know that by default an Android Service will tie up the ui thread?")
         notes.add(note)
 
         note = NoteInfo(course, "Long running operations",
@@ -34,7 +34,7 @@ object DataManager {
 
         course = courses["Android_architecture"]
         note = NoteInfo(course, "user interface",
-            "The UI consists of a fragment, UserProfileFragment, and its corresponding layout file, user_profile_layout.xml.")
+            "The ui consists of a fragment, UserProfileFragment, and its corresponding layout file, user_profile_layout.xml.")
         notes.add(note)
         note = NoteInfo(course, "user experience",
             "In the majority of cases, desktop apps have a single entry point from a desktop or program launcher, then run as a single, monolithic process.")

@@ -1,4 +1,4 @@
-package com.nicky.noteapp
+package com.nicky.noteapp.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,7 +7,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import com.nicky.noteapp.R
 import com.nicky.noteapp.data.NoteInfo
+import com.nicky.noteapp.ui.NoteListFragmentDirections
 
 class NoteListRecyclerAdapter(context: Context?, private val notes: List<NoteInfo>) :
     RecyclerView.Adapter<NoteListRecyclerAdapter.ViewHolder>(){

@@ -1,10 +1,11 @@
-package com.nicky.noteapp
+package com.nicky.noteapp.ui
 
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.nicky.noteapp.adapters.CourseListRecyclerAdapter
 import com.nicky.noteapp.data.DataManager
 import com.nicky.noteapp.databinding.FragmentCourseListBinding
 
@@ -33,7 +34,7 @@ class CourseListFragment : Fragment() {
         //set the layout manager of the recyclerview
         recyclerView.layoutManager= LinearLayoutManager(context)
         //connect the item view to the adapter
-        recyclerView.adapter=CourseListRecyclerAdapter(context, DataManager.courses.values.toList())
+        recyclerView.adapter= CourseListRecyclerAdapter(context, DataManager.courses.values.toList())
     }
 
     override fun onDestroyView() {
