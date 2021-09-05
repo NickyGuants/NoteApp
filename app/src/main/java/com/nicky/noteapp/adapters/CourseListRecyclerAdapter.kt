@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.nicky.noteapp.data.CourseInfo
 
 class CourseListRecyclerAdapter(context: Context?, private val courses: List<CourseInfo>):
     RecyclerView.Adapter<CourseListRecyclerAdapter.ViewHolder>(){

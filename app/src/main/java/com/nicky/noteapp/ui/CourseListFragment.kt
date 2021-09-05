@@ -5,6 +5,7 @@ import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.nicky.noteapp.data.DataManager
 import com.nicky.noteapp.databinding.FragmentCourseListBinding
 
 

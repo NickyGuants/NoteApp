@@ -6,6 +6,8 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.nicky.noteapp.data.DataManager
+import com.nicky.noteapp.data.POSITION_NOT_SET
 import com.nicky.noteapp.databinding.FragmentNoteListBinding
 
 
@@ -32,7 +34,8 @@ class NoteListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.floatingActionButton2.setOnClickListener{
             findNavController().navigate(NoteListFragmentDirections.actionNoteListFragmentToNoteFragment(
-                POSITION_NOT_SET))
+                POSITION_NOT_SET
+            ))
 
     }
         recyclerView =binding.listItems

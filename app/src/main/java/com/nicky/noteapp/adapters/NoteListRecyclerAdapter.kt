@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import com.nicky.noteapp.data.NoteInfo
 
 class NoteListRecyclerAdapter(context: Context?, private val notes: List<NoteInfo>) :
     RecyclerView.Adapter<NoteListRecyclerAdapter.ViewHolder>(){

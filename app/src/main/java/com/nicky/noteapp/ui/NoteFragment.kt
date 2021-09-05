@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.view.*
 import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
+import com.nicky.noteapp.data.DataManager
+import com.nicky.noteapp.data.POSITION_NOT_SET
 import com.nicky.noteapp.databinding.FragmentNoteBinding
 
 
@@ -43,7 +45,7 @@ class NoteFragment : Fragment() {
         //Adding new notes
         else{
             DataManager.notes.add(NoteInfo())
-            notePosition=DataManager.notes.lastIndex
+            notePosition= DataManager.notes.lastIndex
         }
     }
     private fun displayNote() {
@@ -51,7 +53,7 @@ class NoteFragment : Fragment() {
         binding.textNoteTitle.setText(note.title)
         binding.editTextTextMultiLine.setText(note.text)
 
-        val coursePosition=DataManager.courses.values.indexOf(note.course)
+        val coursePosition= DataManager.courses.values.indexOf(note.course)
         binding.spinnerCourses.setSelection(coursePosition)
     }
 
